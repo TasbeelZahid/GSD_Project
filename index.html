@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>A Unified Solution for Administrative Efficiency and Patient Care: Hospital Management System</title>
+   <!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/app.css" id="maincss">
+   <style>
+      /* New styles for the title container */
+      .title-container {
+         background-color: #4CAF50;
+         padding: 40px 0;
+         text-align: center;
+         color: #fff;
+         display: flex; /* Use flexbox */
+         align-items: center; /* Center vertically */
+         justify-content: space-between; /* Space items horizontally */
+      }
+
+      .hospital-logo {
+         max-width: 150px; /* Adjust the width as needed */
+         height: auto; /* Maintain aspect ratio */
+      }
+
+      /* New styles for the widget panels */
+      .panel.widget {
+         border-radius: 0;
+         border: none;
+         transition: all 0.3s ease;
+      }
+      .panel.widget:hover {
+         transform: translateY(-5px);
+      }
+      .panel.widget .row-table {
+         padding: 20px;
+      }
+      .panel.widget .text-center {
+         color: #fff;
+      }
+      .panel.widget .text-bold {
+         font-weight: bold;
+      }
+      .panel.widget .text-uppercase {
+         color: #fff;
+         font-size: 14px;
+         margin-top: 5px;
+      }
+   </style>
+</head>
+
+<body class="layout-h">
+   <div class="wrapper">
+      <!-- top navbar-->
+      <header class="topnavbar-wrapper">
+         <!-- START Top Navbar-->
+         <nav role="navigation" class="navbar topnavbar">
+            <!-- START navbar header-->
+            <!-- END navbar header-->
+            <!-- START Nav wrapper-->
+            <div class="nav-wrapper">
+            </div>
+            <!-- END Nav wrapper-->
+            <!-- START Search form-->
+            <form role="search" action="search.html" class="navbar-form">
+               <div class="form-group has-feedback">
+                  <input type="text" placeholder="Type and hit enter ..." class="form-control">
+                  <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+               </div>
+               <button type="submit" class="hidden btn btn-default">Submit</button>
+            </form>
+            <!-- END Search form-->
+         </nav>
+         <!-- END Top Navbar-->
+      </header>
+      <!-- sidebar-->
+
+      <!-- offsidebar-->
+
+      <!-- Main section-->
+      <section>
+         <!-- Page content-->
+         <div class="content-wrapper">
+            <div class="content-heading">
+               <!-- START Language list-->
+
+               <!-- END Language list    -->
+               <div class="title-container">
+                  <h1>A Unified Solution for Administrative Efficiency and Patient Care</h1>
+                  <img src="Daco_2009317.png" alt="Hospital Logo" class="hospital-logo">
+               </div>
+               <small data-localize="dashboard.WELCOME"></small>
+            </div>
+            <div class="row">
+               <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                     <!-- START widget-->
+                     <a href="patient.html">
+                        <div class="panel widget bg-success">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-success-dark pv-lg">
+                                 <em class="icon-share fa-3x"></em>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="patientcount">1500</div>
+                                 <div class="text-uppercase">Patients</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <a href="doctor.html">
+                        <!-- START widget-->
+                        <div class="panel widget bg-danger">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-danger-dark pv-lg">
+                                 <em class="icon-star fa-3x"></em>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="doctorcount">50</div>
+                                 <div class="text-uppercase">Doctors</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                     <a href="appointment.html">
+                        <!-- START widget-->
+                        <div class="panel widget bg-primary">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-primary-dark pv-lg">
+                                 <em class="icon-star fa-3x"></em>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="appointmentcount">200</div>
+                                 <div class="text-uppercase">Appointments</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Page footer-->
+      <footer>
+         <span>&copy; 2016 - Angle</span>
+      </footer>
+   </div>
+</body>
+</html>
