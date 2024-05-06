@@ -16,8 +16,8 @@
    <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
    <!-- WHIRL (spinners)-->
    <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
-    <link rel="stylesheet" href="vendor/sweetalert/dist/sweetalert.css">
-     <!-- DATATABLES-->
+   <link rel="stylesheet" href="vendor/sweetalert/dist/sweetalert.css">
+   <!-- DATATABLES-->
    <link rel="stylesheet" href="vendor/datatables-colvis/css/dataTables.colVis.css">
    <link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap.css">
    <link rel="stylesheet" href="vendor/dataTables.fontAwesome/index.css">
@@ -77,45 +77,87 @@
                <!-- END Language list    -->
                Patient
                <small data-localize="dashboard.WELCOME"></small>
-                <div class="pull-right">
+               <div class="pull-right">
                   <div class="btn-group">
-                     <button  style="bottom: 27px;" id="addpatient" class="mb-sm btn btn-primary" type="button">Add Patient</button>
+                     <button style="bottom: 27px;" id="addpatient" class="mb-sm btn btn-primary" type="button">Add
+                        Patient</button>
 
                   </div>
                </div>
             </div>
-           <div class="row">
-                  <div class="col-lg-12">
-                     <div class="panel panel-default"  style="padding: 15px;">
+            <div class="row">
+               <div class="col-lg-12"> 
+                  <div class="panel panel-default" style="padding: 15px;">
 
-                        <div class="table-responsive">
-                           <table id="datatable4" class="table table-striped">
-                              <thead>
-                                 <tr>
-                                    <th style="width:20%">First Name</th>
-                                    <th style="width:25%">Last Name</th>
-                                    <th style="width:25%">Insurance</th>
-                                    <th style="width:15%">Adress</th>
-                                    <th style="width:15%">Phone Number</th>
-                                      <th style="width:15%"></th>
-                                      <th style="width:15%"></th>
-                                 </tr>
-                              </thead>
-                              <tbody></tbody>
-                           </table>
-                        </div>
+                     <div class="table-responsive">
+                        <table id="datatable4" class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th style="width:15%">First Name</th>
+                                 <th style="width:15%">Last Name</th>
+                                 <th style="width:15%">Insurance</th>
+                                 <th style="width:15%">Address</th>
+                                 <th style="width:20%">Phone Number</th>
+                                 <th style="width:20%">DOB</th>
+
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td style="width:15%">John</td>
+                                 <td style="width:15%">Doe</td>
+                                 <td style="width:15%">Health</td>
+                                 <td style="width:15%">123 Main St</td>
+                                 <td style="width:20%">555-1234</td>
+                                 <td style="width:25%">1985-07-15</td>
+                              </tr>
+                              <tr>
+                                 <td style="width:15%">Jane</td>
+                                 <td style="width:15%">Smith</td>
+                                 <td style="width:15%">Life</td>
+                                 <td style="width:15%">456 Elm St</td>
+                                 <td style="width:20%">555-5678</td>
+                                 <td style="width:15%">1990-03-25</td>
+                              </tr>
+                              <tr>
+                                 <td style="width:15%">Alice</td>
+                                 <td style="width:15%">Johnson</td>
+                                 <td style="width:15%">Auto</td>
+                                 <td style="width:15%">789 Oak St</td>
+                                 <td style="width:20%">555-9876</td>
+                                 <td style="width:15%">1980-11-10</td>
+                              </tr>
+                              <tr>
+                                 <td style="width:15%">Bob</td>
+                                 <td style="width:15%">Williams</td>
+                                 <td style="width:15%">Home</td>
+                                 <td style="width:15%">101 Pine St</td>
+                                 <td style="width:20%">555-4321</td>
+                                 <td style="width:15%">1976-09-20</td>
+                              </tr>
+                              <tr>
+                                 <td style="width:15%">Eva</td>
+                                 <td style="width:15%">Brown</td>
+                                 <td style="width:15%">Dental</td>
+                                 <td style="width:15%">202 Maple St</td>
+                                 <td style="width:20%">555-8765</td>
+                                 <td style="width:15%">1995-12-05</td>
+                              </tr>
+                           </tbody>
+                        </table>
                      </div>
                   </div>
                </div>
+            </div>
          </div>
       </section>
       <!-- Page footer-->
       <footer>
-         <span>&copy; 2016 - Angle</span>
+         <span>&copy; 2024 - Angle</span>
       </footer>
    </div>
 
-    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+   <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="modal-dialog">
          <div class="modal-content">
             <div class="modal-header">
@@ -126,38 +168,39 @@
             </div>
             <div class="modal-body">
                <form data-parsley-validate="" novalidate="" class="form-horizontal" id="detailform">
-                           <div class="form-group">
-                              <label class="col-lg-2 control-label">First Name</label>
-                              <div class="col-lg-10">
-                                 <input required type="text" name="pat_first_name" class="form-control" placeholder="First Name">
-                              </div>
-                           </div>
-                           <div class="form-group">
-                              <label class="col-lg-2 control-label">Last name</label>
-                              <div class="col-lg-10">
-                                 <input required type="text" name="pat_last_name" class="form-control" placeholder="Last name">
-                              </div>
-                           </div>
-                   <div class="form-group">
-                              <label class="col-lg-2 control-label">Insurance No</label>
-                              <div class="col-lg-10">
-                                 <input required type="text" name="pat_insurance_no"  class="form-control" placeholder="Insurance No">
-                              </div>
-                           </div>
-                   <div class="form-group">
-                              <label class="col-lg-2 control-label">Phone Number</label>
-                              <div class="col-lg-10">
-                                 <input required name="pat_ph_no" type="text" class="form-control" placeholder="Phone Number">
-                              </div>
-                           </div>
-                   <div class="form-group">
-                              <label class="col-lg-2 control-label">Address</label>
-                              <div class="col-lg-10">
-                                 <textarea required name="pat_address" class="form-control" placeholder="Address"></textarea>
-                              </div>
-                           </div>
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">First Name</label>
+                     <div class="col-lg-10">
+                        <input required type="text" name="pat_first_name" class="form-control" placeholder="First Name">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Last name</label>
+                     <div class="col-lg-10">
+                        <input required type="text" name="pat_last_name" class="form-control" placeholder="Last name">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Insurance No</label>
+                     <div class="col-lg-10">
+                        <input required type="text" name="pat_insurance_no" class="form-control"
+                           placeholder="Insurance No">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Phone Number</label>
+                     <div class="col-lg-10">
+                        <input required name="pat_ph_no" type="text" class="form-control" placeholder="Phone Number">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Address</label>
+                     <div class="col-lg-10">
+                        <textarea required name="pat_address" class="form-control" placeholder="Address"></textarea>
+                     </div>
+                  </div>
 
-                        </form>
+               </form>
 
 
 
@@ -176,7 +219,7 @@
    <script src="vendor/jquery/dist/jquery.js"></script>
    <!-- BOOTSTRAP-->
    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+   <script src="vendor/datatables/media/js/jquery.dataTables.min.js"></script>
    <script src="vendor/datatables-colvis/js/dataTables.colVis.js"></script>
    <script src="vendor/datatables/media/js/dataTables.bootstrap.js"></script>
    <script src="vendor/serialize/jquery.serializejson.js"></script>
@@ -186,14 +229,14 @@
    <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
    <!-- ANIMO-->
    <script src="vendor/animo.js/animo.js"></script>
-    <script src="vendor/parsley/parsley.min.js"></script>
-       <script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="vendor/parsley/parsley.min.js"></script>
+   <script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
    <!-- LOCALIZE-->
    <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
    <!-- =============== APP SCRIPTS ===============-->
    <script src="app/js/app.js"></script>
-<script src="js/patient.js"></script>
+   <script src="js/patient.js"></script>
 </body>
 
 </html>
