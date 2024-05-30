@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>Login - Hospital Management System</title>
+   <!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/app.css" id="maincss">
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         background: linear-gradient(to right, #b2fefa, #0ed2f7);
+         font-family: Arial, sans-serif;
+      }
+
+      .login-container {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         width: 70%;
+         height: 70%;
+         background: #fff;
+         border-radius: 15px;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+      }
+
+      .login-form {
+         padding: 40px;
+         width: 50%;
+         background: #f5f5f5;
+      }
+
+      .login-form h2 {
+         margin-bottom: 20px;
+         font-size: 24px;
+         color: #333;
+         text-align: center;
+      }
+
+      .login-form .form-group {
+         margin-bottom: 20px;
+      }
+
+      .login-form .form-control {
+         height: 45px;
+         border-radius: 25px;
+         font-size: 16px;
+         padding: 10px 20px;
+      }
+
+      .login-form .btn {
+         width: 100%;
+         padding: 10px;
+         font-size: 18px;
+         border-radius: 25px;
+         background: #4CAF50;
+         color: #fff;
+         border: none;
+      }
+
+      .login-form .btn:hover {
+         background: #45a049;
+      }
+
+      .login-form .forgot-password {
+         display: block;
+         text-align: right;
+         margin-top: -10px;
+         margin-bottom: 20px;
+         color: #666;
+      }
+
+      .login-form .forgot-password:hover {
+         color: #333;
+         text-decoration: underline;
+      }
+
+      .image-container {
+         width: 50%;
+         height: 100%;
+         background: url('Login.png') no-repeat center center;
+         background-size: cover;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="login-container">
+      <div class="login-form">
+         <h2>Login</h2>
+         <form action="#" method="post">
+            <div class="form-group">
+               <label for="username" class="sr-only">Username</label>
+               <input type="text" class="form-control" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+               <label for="password" class="sr-only">Password</label>
+               <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <a href="/" class="forgot-password">Forgot password?</a>
+           <a href="/" class="btn btn-primary">Login</a>
+       
+         </form>
+      </div>
+      <div class="image-container">
+        <img src="loginLog.png" style="height: 80%;width: 80%;">
+      </div>
+   </div>
+</body>
+</html>
